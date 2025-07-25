@@ -1,0 +1,137 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #b0e6e5;
+}
+.full {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #b0e6e5;
+    
+  }
+  input {
+    padding: 10px;
+    margin: 4px 0;
+    border: 2px solid #0077b6;
+    border-radius: 6px;
+    background-color: #f0f9ff; 
+    color: #003049;              
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+  }
+  
+  .form-full {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px;
+    background-color:  #cbe6e5;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  .add-button {
+    margin-top: 1rem;
+    background-color: #0077b6;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .submit-button{
+    margin-top: 1rem;
+    background-color: #08b062;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+  }
+  em{
+    color: rgb(85, 81, 81);
+  }
+  br{
+    color: white;
+  }
+  select{
+    padding: 8px;
+    margin: 15px 0;
+    border: 2px solid #0077b6;
+    border-radius: 6px;
+    background-color: #f0f9ff; 
+    color: #003049;              
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+    color: gray;
+
+  }
+  .delete-button{
+    margin-top: 1rem;
+    background-color: #ac0d0d;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+  }
+  .title{
+   margin-top: 12px;
+    color:  #005b75;
+    font-weight: bold;
+    font-size: 50px;
+
+  }
+  p{
+    color: gray;
+    font-size: 20px;
+
+  }
+  .checkbox-wrap
+  {
+    border-radius: 4px;
+    font-size: 14px;
+    color: gray;
+  }
+  .checkbox-wrap input[type="checkbox"] {
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border: 2px solid #0077b6;
+    border-radius: 7px;
+    background-color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+  }
+  .checkbox-wrap input[type="checkbox"]:checked {
+    background-color: #0077b6;
+  }
+  
+  .checkbox-wrap input[type="checkbox"]:checked::after {
+    content: "✔";
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    top: 0;
+    left: 2px;
+  }
+  
