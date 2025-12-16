@@ -43,3 +43,18 @@ Environment Variables (dotenv)
 CORS
 
 Async/Await
+
+📁 Project Structure
+medical/
+├── src/                # React frontend
+│   └── Remm.jsx
+├── server/             # Backend (Node + Express)
+│   ├── models/
+│   │   └── Reminder.js
+│   ├── routes/
+│   │   └── reminderRoutes.js
+│   ├── server.js
+│   ├── package.json
+│   └── package-lock.json
+├── vite.config.js
+└── README.md
