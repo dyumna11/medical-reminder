@@ -67,10 +67,34 @@ function Remm()
       };
       
 
-    const handleSubmit = (e) => {
+      const handleSubmit = async (e) => {
         e.preventDefault();
-
-    }
+      
+        const dataToSend = {
+          name,
+          age,
+          number,
+          medicines: medicinelist,
+        };
+      
+        try {
+          const res = await fetch("http://localhost:5001/api/reminder", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(dataToSend),
+          });
+          
+      
+          const result = await res.json();
+          alert(result.message);
+        } catch (error) {
+          console.error("Error:", error);
+          alert("Failed to submit data");
+        }
+      };
+      
 
     return(
         <>
@@ -139,6 +163,9 @@ function Remm()
 ))}
 
         <button className="add-button" type="button" onClick={add}>Add medicine</button>
+        <button type="submit" className="submit-button">
+            Submit
+          </button>
         </form>
         <ul>
 
@@ -154,12 +181,11 @@ function Remm()
           </li>
         ))}
       </ul>
-      </div>
-      <button className="submit-button">Submit</button>
-      
+      </div>      
        
         
         </>
+        
     )
 }
 export default Remm;
