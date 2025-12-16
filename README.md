@@ -1,49 +1,45 @@
-💊 Medical Reminder (Stage 1)
-A simple React-based medical reminder form where users can input data with checkboxes and dropdowns. Built with a modern UI and clean form design.
+📌 Medical Reminder Application
 
-📦 Features
-Responsive form UI
+A full-stack MERN medical reminder application that allows users to create, manage, and store medicine schedules with timing and frequency details. Built with a modern React frontend and a Node.js + Express backend, using MongoDB Atlas for persistent storage.
 
-Custom styled checkboxes
+🚀 Features
 
-Input structure and basic validation
+Add and manage multiple medicines with frequency and timing
 
-Placeholder for Add/Delete functionality (for future stages)
+Dynamic form handling with checkbox-based scheduling
 
-📁 Project Structure
-lua
-Copy
-Edit
-medical-reminder/
-└── medical/
-    ├── src/
-    ├── index.html
-    ├── package.json
-    └── vite.config.js
-🚀 How to Run
-bash
-Copy
-Edit
-cd medical
-npm install
-npm run dev
-Then open the local development server link (usually http://localhost:5173) in your browser.
+RESTful API integration for data storage and retrieval
 
-🔮 Future Plans (Stage 2+)
-Add reminder notifications
+Secure backend with environment-based configuration
 
--Store data locally or on the cloud
-
--Set medicine schedule alerts
-
--Add edit/delete capabilities
-
--Integrate backend using Node.js + Express or Firebase
-
--Save reminder history and track medicine intake
+Responsive and clean UI built with React
 
 🛠️ Tech Stack
+
+Frontend
+
 React.js (Vite)
 
-CSS (custom)
+JavaScript, HTML, CSS
 
+Backend
+
+Node.js
+
+Express.js
+
+MongoDB Atlas
+
+Mongoose
+
+Tools & Concepts
+
+REST APIs
+
+Git & GitHub
+
+Environment Variables (dotenv)
+
+CORS
+
+Async/Await
