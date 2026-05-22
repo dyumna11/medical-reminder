@@ -2,8 +2,6 @@ const express = require("express");
 const Reminder = require("../models/Reminder");
 
 const router = express.Router();
-
-// GET all reminders
 router.get("/reminder", async (req, res) => {
   try {
     const reminders = await Reminder.find();
@@ -13,8 +11,7 @@ router.get("/reminder", async (req, res) => {
   }
 });
 
-// POST a new reminder
-router.post("/reminder", async (req, res) => {
+router.post("/", async (req, res) => {
   try {
     console.log("📥 Reminder received:", req.body);
 

@@ -15,6 +15,7 @@ const ReminderSchema = new mongoose.Schema(
     name: { type: String, required: true },
     age: Number,
     number: String,
+    email: { type: String, required: true },
     medicines: [MedicineSchema],
   },
   { timestamps: true }

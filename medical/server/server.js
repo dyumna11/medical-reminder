@@ -1,8 +1,8 @@
 require("dotenv").config();
+require("./scheduler");
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-
 const reminderRoutes = require("./routes/reminderRoutes");
 
 const app = express();
@@ -14,8 +14,7 @@ async function startServer() {
     await mongoose.connect(process.env.MONGO_URI);
     console.log("✅ MongoDB connected");
 
-    app.use("/api", reminderRoutes);
-
+    app.use("/api/reminder", reminderRoutes);
     app.listen(5001, () => {
       console.log("SERVER STARTED ON 5001");
     });
