@@ -23,9 +23,4 @@ const sendEmail = async (to, medicine, time) => {
     console.error("❌ EMAIL ERROR:", err);
   }
 };
-sendEmail(
-    "yourgmail@gmail.com",
-    "Paracetamol",
-    "6:15 PM"
-  );
 module.exports = sendEmail;

@@ -6,6 +6,10 @@ function Remm()
     const create=(e)=>{
         setName(e.target.value);
     }
+    const [email,setEmail]=useState("");
+    const callemail=(e)=>{
+        setEmail(e.target.value);
+    }
     const [number,setNumber]=useState("");
     const func=(e)=>{
         setNumber(e.target.value);
@@ -71,12 +75,12 @@ function Remm()
         e.preventDefault();
       
         const dataToSend = {
-          name,
+          name,email,
           age,
           number,
           medicines: medicinelist,
         };
-      
+        console.log(dataToSend);
         try {
           const res = await fetch("http://localhost:5001/api/reminder", {
             method: "POST",
@@ -103,6 +107,8 @@ function Remm()
         <h1 className="title">MEDICALL</h1>
         <input value={name} onChange={create}placeholder="Enter your name"></input>
         <p>{name}</p>
+        <input value={email} onChange={callemail}placeholder="Enter your email"></input>
+        <p>{email}</p>
         <input value={age} onChange={callage}placeholder="Enter your age"></input>
         <p>{age}</p>
         <input value={number} onChange={func} type="number" placeholder="Enter number of medicines"></input>

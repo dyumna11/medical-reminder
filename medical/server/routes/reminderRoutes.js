@@ -10,7 +10,13 @@ router.get("/reminder", async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
+const sendEmail = require("../sendEmail");
 
+await sendEmail(
+  req.body.email,
+  req.body.medicines[0].name,
+  "Test Time"
+);
 router.post("/", async (req, res) => {
   try {
     console.log("📥 Reminder received:", req.body);
