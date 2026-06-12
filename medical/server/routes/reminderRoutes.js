@@ -12,18 +12,19 @@ router.get("/reminder", async (req, res) => {
 });
 const sendEmail = require("../sendEmail");
 
-await sendEmail(
-  req.body.email,
-  req.body.medicines[0].name,
-  "Test Time"
-);
+
 router.post("/", async (req, res) => {
   try {
+ 
     console.log("📥 Reminder received:", req.body);
 
     const reminder = new Reminder(req.body);
     await reminder.save();
-
+    await sendEmail(
+      req.body.email,
+      req.body.medicines[0].name,
+      "Test Time"
+    );
     res.json({ message: "Reminder saved successfully" });
   } catch (err) {
     console.error(err);
