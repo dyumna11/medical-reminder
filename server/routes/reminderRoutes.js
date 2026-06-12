@@ -12,8 +12,10 @@ router.get("/reminder", async (req, res) => {
 });
 const sendEmail = require("../sendEmail");
 
-
 router.post("/", async (req, res) => {
+  console.log("HEADERS:", req.headers);
+  console.log("BODY:", req.body);
+
   try {
  
     console.log("📥 Reminder received:", req.body);

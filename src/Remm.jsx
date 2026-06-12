@@ -87,8 +87,8 @@ function Remm()
           number,
           medicines: medicinelist,
         };
-        console.log(dataToSend);
         try {
+          console.log("SENDING REMINDER:", JSON.stringify(dataToSend));
           const res = await fetch(`${import.meta.env.VITE_API_URL}/api/reminder`, {
             method: "POST",
             headers: {
