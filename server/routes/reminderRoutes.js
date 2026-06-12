@@ -20,11 +20,15 @@ router.post("/", async (req, res) => {
 
     const reminder = new Reminder(req.body);
     await reminder.save();
-    await sendEmail(
-      req.body.email,
-      req.body.medicines[0].name,
-      "Test Time"
-    );
+    try {
+      await sendEmail(
+        req.body.email,
+        req.body.medicines[0].name,
+        "Test Time"
+      );
+    } catch (err) {
+      console.error("EMAIL ERROR:", err);
+    }
     res.json({ message: "Reminder saved successfully" });
   } catch (err) {
     console.error(err);
