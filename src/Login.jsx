@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Auth.css";
-
 function Login() {
+    console.log("API URL =", import.meta.env.VITE_API_URL);
   const [email,setEmail] = useState("");
   const [password,setPassword] = useState("");
   const navigate = useNavigate();
@@ -10,8 +10,7 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
 
-    const res = await fetch(
-      "http://localhost:5001/api/auth/login",
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/login`,
       {
         method:"POST",
         headers:{

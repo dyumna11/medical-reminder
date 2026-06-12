@@ -89,7 +89,7 @@ function Remm()
         };
         console.log(dataToSend);
         try {
-          const res = await fetch("http://localhost:5001/api/reminder", {
+          const res = await fetch(`${import.meta.env.VITE_API_URL}/api/reminder`, {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

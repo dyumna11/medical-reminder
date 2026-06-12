@@ -15,7 +15,7 @@ function Signup() {
     e.preventDefault();
 
     const res = await fetch(
-      "http://localhost:5001/api/auth/register",
+      `${import.meta.env.VITE_API_URL}/api/auth/register`,
       {
         method:"POST",
         headers:{
