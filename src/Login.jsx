@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Auth.css";
 function Login() {
-    console.log("API URL =", import.meta.env.VITE_API_URL);
   const [email,setEmail] = useState("");
   const [password,setPassword] = useState("");
   const navigate = useNavigate();
@@ -56,7 +55,15 @@ function Login() {
         <button className="auth-btn">
           Login
         </button>
-      </form>
+      
+
+<p className="auth-switch">
+  Don't have an account?
+  <span onClick={() => navigate("/signup")}>
+    Sign Up
+  </span>
+</p>
+</form>
     </div>
   );
 }

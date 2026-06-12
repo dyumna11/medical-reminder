@@ -73,3 +73,22 @@ body {
   .auth-link span:hover {
     text-decoration: underline;
   }
+  .auth-switch {
+    margin-top: 15px;
+    color: #666;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .auth-switch span {
+    color: #0077b6;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: 0.3s;
+  }
+  
+  .auth-switch span:hover {
+    color: #023e8a;
+    text-decoration: underline;
+  }

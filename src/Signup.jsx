@@ -1,12 +1,9 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 import "./Auth.css";
 
-<p>
-Already have an account?
-<Link to="/login"> Login </Link>
-</p>
 function Signup() {
+    const navigate = useNavigate();
   const [name,setName] = useState("");
   const [email,setEmail] = useState("");
   const [password,setPassword] = useState("");
@@ -63,7 +60,14 @@ function Signup() {
         <button className="auth-btn">
           Register
         </button>
+        <p className="auth-switch">
+  Already have an account?
+  <span onClick={() => navigate("/login")}>
+    Login
+  </span>
+</p>
       </form>
+     
     </div>
   );
 }
