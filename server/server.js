@@ -10,13 +10,14 @@ const app = express();
 const cors = require("cors");
 
 const reminderRoutes = require("./routes/reminderRoutes");
-
+app.use("/api/reminder", reminderRoutes);
 app.use(cors());
 app.use(express.json());
 app.use("/api/auth", authRoutes);
 // Routes
-app.use("/api/reminder", reminderRoutes);
-
+app.get("/", (req, res) => {
+  res.send("Medical Reminder Backend Running 🚀");
+});
 // MongoDB Connection + Server Start
 async function startServer() {
   try {
