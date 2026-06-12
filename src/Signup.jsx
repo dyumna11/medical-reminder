@@ -10,24 +10,35 @@ function Signup() {
 
   const handleSignup = async (e) => {
     e.preventDefault();
-
-    const res = await fetch(
-      `${import.meta.env.VITE_API_URL}/api/auth/register`,
-      {
-        method:"POST",
-        headers:{
-          "Content-Type":"application/json"
-        },
-        body: JSON.stringify({
-          name,
-          email,
-          password
-        })
+    try {
+        const res = await fetch(
+          `${import.meta.env.VITE_API_URL}/api/auth/register`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              name,
+              email,
+              password,
+            }),
+          }
+        );
+      
+        const data = await res.json();
+      
+        if (!res.ok) {
+          alert(data.message);
+          return;
+        }
+      
+        alert("Registration successful!");
+        navigate("/login");
+      } catch (error) {
+        console.error(error);
+        alert("Signup failed");
       }
-    );
-
-    const data = await res.json();
-    alert(data.message);
   };
 
   return (
