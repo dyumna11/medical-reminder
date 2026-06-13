@@ -8,6 +8,7 @@ const authRoutes = require("./routes/auth");
 const app = express();
 
 const cors = require("cors");
+app.use(express.json());
 
 const reminderRoutes = require("./routes/reminderRoutes");
 
@@ -23,7 +24,6 @@ app.use(
   })
 );
 app.use("/api/reminder", reminderRoutes);
-app.use(express.json());
 app.use("/api/auth", authRoutes);
 // Routes
 app.get("/", (req, res) => {
