@@ -3,6 +3,9 @@ console.log(
   Object.keys(process.env)
     .filter(k => k.includes("MAIL") || k.includes("EMAIL"))
 );
+console.log("EMAIL RAW:", process.env.EMAIL);
+console.log("PASSWORD RAW:", process.env.PASSWORD ? "FOUND" : "NOT FOUND");
+console.log("ALL ENV KEYS:", Object.keys(process.env).sort());
 console.log("SERVER EMAIL =", process.env.EMAIL);
 console.log("SERVER PASSWORD EXISTS =", !!process.env.PASSWORD);
 require("./scheduler");
