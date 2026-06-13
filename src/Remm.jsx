@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 function Remm()
 {
+  
   const navigate = useNavigate();
 
   
@@ -99,6 +100,9 @@ function Remm()
           
       
           const result = await res.json();
+
+  console.log("STATUS:", res.status);
+  console.log("RESULT:", result);
           alert(result.message);
         } catch (error) {
           console.error("Error:", error);
