@@ -6,21 +6,27 @@ cron.schedule("* * * * *", async () => {
   try {
     const now = new Date();
 
-    const currentTime = now.toLocaleTimeString([], {
+    const currentTime = now.toLocaleTimeString("en-IN", {
+      timeZone: "Asia/Kolkata",
       hour: "2-digit",
       minute: "2-digit",
       hour12: false,
     });
-
     console.log("⏰ Checking reminders at:", currentTime);
 
     const reminders = await Reminder.find();
+
 
     reminders.forEach((user) => {
       user.medicines.forEach((med) => {
         med.when.forEach((moment) => {
           const medicineTime = med.times.get(moment);
-
+          console.log(
+            "COMPARE:",
+            medicineTime,
+            "vs",
+            currentTime
+          );
           if (medicineTime === currentTime) {
             console.log(
               `📨 Sending reminder to ${user.email} for ${med.name}`
