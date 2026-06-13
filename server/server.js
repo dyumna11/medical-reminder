@@ -3,15 +3,11 @@ require("./scheduler");
 
 const express = require("express");
 const mongoose = require("mongoose");
-
-const authRoutes = require("./routes/auth");
-const app = express();
-
 const cors = require("cors");
-app.use(express.json());
-
+const authRoutes = require("./routes/auth");
 const reminderRoutes = require("./routes/reminderRoutes");
 
+const app = express();
 app.use(
   cors({
     origin: [
@@ -23,6 +19,8 @@ app.use(
     credentials: true,
   })
 );
+
+app.use(express.json());
 app.use("/api/reminder", reminderRoutes);
 app.use("/api/auth", authRoutes);
 // Routes
