@@ -1,5 +1,4 @@
 require("dotenv").config();
-require("dotenv").config();
 
 console.log("SERVER EMAIL =", process.env.EMAIL);
 console.log("SERVER PASSWORD EXISTS =", !!process.env.PASSWORD);
