@@ -1,5 +1,8 @@
 require("dotenv").config();
-
+console.log(
+  Object.keys(process.env)
+    .filter(k => k.includes("MAIL") || k.includes("EMAIL"))
+);
 console.log("SERVER EMAIL =", process.env.EMAIL);
 console.log("SERVER PASSWORD EXISTS =", !!process.env.PASSWORD);
 require("./scheduler");
