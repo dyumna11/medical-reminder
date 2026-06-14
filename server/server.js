@@ -47,7 +47,7 @@ async function startServer() {
     app.listen(5001, () => {
       console.log("🚀 SERVER STARTED ON PORT 5001");
       sendEmail(
-        "your_email@gmail.com",
+        "dyumna.negi1@gmail.com",
         "Paracetamol",
         "Now"
       );
