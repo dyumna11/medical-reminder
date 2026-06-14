@@ -1,4 +1,5 @@
 require("dotenv").config();
+const sendEmail = require("./sendEmail");
 console.log(
   Object.keys(process.env)
     .filter(k => k.includes("MAIL") || k.includes("EMAIL"))
@@ -45,6 +46,11 @@ async function startServer() {
 
     app.listen(5001, () => {
       console.log("🚀 SERVER STARTED ON PORT 5001");
+      sendEmail(
+        "your_email@gmail.com",
+        "Paracetamol",
+        "Now"
+      );
     });
   } catch (err) {
     console.error("❌ MongoDB connection failed:", err);
