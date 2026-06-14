@@ -14,6 +14,8 @@ const transporter = nodemailer.createTransport({
     pass: process.env.PASSWORD,
   },
 });
+console.log("sendEmail.js loaded");
+console.log("Running SMTP verify...");
 transporter.verify((error, success) => {
   if (error) {
     console.log("SMTP ERROR:", error);
