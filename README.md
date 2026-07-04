@@ -4,42 +4,65 @@ Medical Reminder is a full-stack web application that helps users manage and tra
 
 ## Features
 
-* User Authentication (Signup & Login)
-* Add and Manage Medicine Reminders
-* Custom Reminder Schedules
-* Cloud-Based Data Storage
-* Automated Background Scheduler
-* Email Reminder Integration
-* Responsive User Interface
+- Secure JWT-based authentication with encrypted password storage using bcrypt
+- Create, update, and delete medication reminders
+- Custom medication schedules with configurable reminder timings
+- Automated email reminders using Node-Cron and Resend
+- RESTful API architecture for reminder management
+- Cloud-hosted MongoDB Atlas database
+- Responsive React frontend
 
 ## Tech Stack
 
-### Frontend
+Frontend
+React
+React Router
+CSS
 
-* React.js
-* React Router
-* CSS
+Backend
+Node.js
+Express.js
 
-### Backend
+Database
+MongoDB Atlas
+Mongoose
 
-* Node.js
-* Express.js
+Authentication
+JWT
+bcrypt
 
-### Database
+Scheduler
+Node-Cron
 
-* MongoDB Atlas
-* Mongoose
+Email
+Resend API
 
-### Deployment
-
-* Vercel (Frontend)
-* Render (Backend)
+Deployment
+Vercel
+Render
 
 ## Live Demo
 
 Frontend: https://medical-reminder.vercel.app/
 
 Backend API: https://medical-reminder-tp61.onrender.com/
+
+## Architecture
+
+User
+   │
+   ▼
+React Frontend
+   │
+REST API
+   ▼
+Express.js Backend
+   │
+   ├── JWT Authentication
+   ├── Reminder Scheduler (Node-Cron)
+   ├── Email Service (Resend)
+   ▼
+MongoDB Atlas
 
 ## How It Works
 
@@ -49,17 +72,14 @@ Backend API: https://medical-reminder-tp61.onrender.com/
 4. A background scheduler continuously monitors reminder timings.
 5. Email notifications are sent when medication times are reached.
 
-## Learning Outcomes
+## Key Engineering Concepts
 
-This project demonstrates:
-
-* Full-Stack MERN Development
-* REST API Design
-* Authentication & Authorization
-* MongoDB Database Integration
-* Cloud Deployment
-* Scheduled Background Tasks
-* Email Automation
+RESTful API Design
+JWT Authentication
+Password Hashing with bcrypt
+Background Scheduling
+Cloud Database Design
+Full-Stack MERN Development
 
 ## Future Improvements
 
