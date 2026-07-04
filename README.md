@@ -1,8 +1,8 @@
 
 # Medical Reminder App 💊
 
-Medical Reminder is a full-stack web application that helps users manage and track their medications efficiently. Users can create accounts, log in securely, add medicines with customized schedules, and store their reminder data in the cloud.
-## 📸 Screenshots
+Medical Reminder is a production-ready MERN application that enables users to securely manage medication schedules, receive automated email reminders, and store reminder data using a cloud-hosted backend.
+##  Screenshots
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/d81c7415-e829-406c-94f9-c7ff005c1230" alt="Dashboard" width="45%" />
@@ -54,8 +54,10 @@ Frontend: https://medical-reminder.vercel.app/
 
 Backend API: https://medical-reminder-tp61.onrender.com/
 
-## Architecture
 
+##  Architecture
+
+```text
 User
    │
    ▼
@@ -70,6 +72,7 @@ Express.js Backend
    ├── Email Service (Resend)
    ▼
 MongoDB Atlas
+```
 
 ## How It Works
 
@@ -81,12 +84,12 @@ MongoDB Atlas
 
 ## Key Engineering Concepts
 
-RESTful API Design
-JWT Authentication
-Password Hashing with bcrypt
-Background Scheduling
-Cloud Database Design
-Full-Stack MERN Development
+- RESTful API Design
+- JWT Authentication
+- Password Hashing with bcrypt
+- Background Scheduling using Node-Cron
+- Cloud Database Design with MongoDB Atlas
+- Full-Stack MERN Development
 
 ## Future Improvements
 
