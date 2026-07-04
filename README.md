@@ -8,6 +8,7 @@ Medical Reminder is a full-stack web application that helps users manage and tra
   <img src="https://github.com/user-attachments/assets/d81c7415-e829-406c-94f9-c7ff005c1230" alt="Dashboard" width="45%" />
   <img src="https://github.com/user-attachments/assets/cfca8580-14b3-41de-9100-dd153414cdd5" alt="Email Reminder" width="30%" />
 </p>
+
 ## Features
 
 - Secure JWT-based authentication with encrypted password storage using bcrypt
