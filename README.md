@@ -2,16 +2,11 @@
 # Medical Reminder App 💊
 
 Medical Reminder is a full-stack web application that helps users manage and track their medications efficiently. Users can create accounts, log in securely, add medicines with customized schedules, and store their reminder data in the cloud.
-<h2>📸 Screenshots</h2>
+## 📸 Screenshots
 
-<h3 align="center">Login</h3>
 <p align="center">
-  <img width="700" src="https://github.com/user-attachments/assets/d81c7415-e829-406c-94f9-c7ff005c1230" />
-</p>
-
-<h3 align="center">Adding Reminder</h3>
-<p align="center">
-  <img width="500" src="https://github.com/user-attachments/assets/cfca8580-14b3-41de-9100-dd153414cdd5" />
+  <img src="https://github.com/user-attachments/assets/d81c7415-e829-406c-94f9-c7ff005c1230" alt="Dashboard" width="45%" />
+  <img src="https://github.com/user-attachments/assets/cfca8580-14b3-41de-9100-dd153414cdd5" alt="Email Reminder" width="30%" />
 </p>
 ## Features
 
